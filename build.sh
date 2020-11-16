@@ -13,7 +13,7 @@ path=/root
 cd
 mkdir black_caps
 git clone https://github.com/RaghuVarma331/aarch64-linux-android-4.9.git -b master --depth=1 aarch64-linux-android-4.9
-git clone https://github.com/RaghuVarma331/clang.git -b android-10.0 --depth=1 clang
+git clone https://github.com/RaghuVarma331/clang.git -b android-11.0 --depth=1 clang
 cd kernel
 clear
 make O=out ARCH=arm64 SAT-perf_defconfig
@@ -25,8 +25,8 @@ make -j$(nproc --all) O=out \
                       CROSS_COMPILE=aarch64-linux-android-
 cp -r out/arch/arm64/boot/Image.gz-dtb $path/kernel/DRG_sprout
 cd DRG_sprout
-zip -r Black_caps-10.0-CLANG-FIH-SDM660-2018-$(date +"%Y%m%d").zip META-INF patch tools Image.gz-dtb anykernel.sh
-cp -r Black_caps-10.0-CLANG-FIH-SDM660-2018-$(date +"%Y%m%d").zip $path/black_caps
+zip -r Black_caps-11.0-CLANG-FIH-SDM660-2018-$(date +"%Y%m%d").zip META-INF patch tools Image.gz-dtb anykernel.sh
+cp -r Black_caps-11.0-CLANG-FIH-SDM660-2018-$(date +"%Y%m%d").zip $path/black_caps
 cd
 cd $path
 cd black_caps
