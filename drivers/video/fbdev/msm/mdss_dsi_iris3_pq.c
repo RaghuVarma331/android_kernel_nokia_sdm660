@@ -191,8 +191,6 @@ u32 iris_get_csc_type(u32 type)
 			csc_type = MDSS_MDP_CSC_YUV2YUV;
 		else if (iris_HDR10)
 			csc_type = MDSS_MDP_CSC_YUV2RGB_2020L;
-		if (iris_HDR10_YCoCg)
-			csc_type = MDSS_MDP_CSC_YCoCg;
 	}
 
 	return csc_type;
